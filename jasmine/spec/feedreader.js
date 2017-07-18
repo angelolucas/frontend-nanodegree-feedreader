@@ -55,15 +55,13 @@ $(function() {
      * should have two expectations:
      */
 
-    // Does the menu display when clicked
-    it('display menu after click', function() {
+    it('toggle menu after click', function() {
+      // Does the menu display when clicked
       $('.menu-icon-link').trigger('click');
       $menuHidden = $('body').hasClass('menu-hidden');
       expect($menuHidden).toBe(false);
-    });
 
-    // Does it hide when clicked again.
-    it('hide menu after click again', function() {
+      // Does it hide when clicked again.
       $('.menu-icon-link').trigger('click');
       $menuHidden = $('body').hasClass('menu-hidden');
       expect($menuHidden).toBe(true);
